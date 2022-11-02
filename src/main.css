@@ -1,7 +1,7 @@
 :root {
   --bgColor: #D0F4F0;
   --yellowDark: #F4D799;
-  --peachDark: #F6A89E;
+  /* --peachDark: #F6A89E; */
   --aquaDark: #8CD4CB;
   --hoverAqua: #79bab2;
   --txtColot: #33322E;
@@ -26,6 +26,18 @@ body {
   background-color: var(--bgColor);
 }
 
+h1 {
+  margin: var(--space);
+  padding-bottom: var(--space);
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 120%;
+  color: var(--txtColot);
+  text-transform: capitalize;
+  text-align: center;
+  border-bottom: var(--border);
+}
+
 #app>.container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 270px);
@@ -47,13 +59,19 @@ body {
 }
 
 .note {
-  background-color: var(--yellowDark);
   resize: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
-
   box-shadow: var(--boxShadow);
+}
+
+.note:nth-of-type(odd) {
+  background-color: var(--yellowDark);
+}
+
+.note:nth-of-type(even) {
+  background-color: var(--aquaDark);
 }
 
 .add-note {
